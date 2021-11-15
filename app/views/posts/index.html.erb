@@ -1,7 +1,11 @@
 <h1>Hey</h1>
 
+<%= link_to "New Post", new_post_path%>
+
 <ul>
     <%@posts.each do |p|%>
-        <li><%= p.title %></li>
+        <li>
+            <%= link_to p.title, p %>
+        </li>
     <%end%>
 </ul>
