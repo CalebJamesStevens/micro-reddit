@@ -8,18 +8,11 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
     end
 
-    def new
-        @post = Post.new
-    end
-
     def create
-        @post = Post.new(post_params)
-        if @post.save
-            redirect_to @post
-        else
-            render :new
-            puts @post.errors.full_messages
-        end
+        @user = User.find(params[:user_id])
+        @post = @user.posts.create(post_params)
+        redirect_to @user
+    
     end
 
     def edit
@@ -29,6 +22,10 @@ class PostsController < ApplicationController
     end
 
     def destroy
+        @post = Post.find(params[:id])
+        @post.destroy
+    
+        redirect_to user_path(@post.user.id)
     end
 
     private
