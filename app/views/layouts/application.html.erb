@@ -11,6 +11,28 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="nav-bar">
+      <div class="logo">Micro-Reddit</div>
+      <div class="nav-item-container">
+        <div class="nav-item"><%=link_to "Home", posts_path%></div>
+        <div class="nav-item"><%=link_to "Create Post", new_post_path%></div>
+        <%if current_user%>
+          <div class="nav-item"><%=link_to "Log Out", destroy_user_session_path, method: "delete"%></div>
+        <%else%>
+          <div class="nav-item"><%=link_to "Sign In", new_user_session_path%></div>
+          <div class="nav-item"><%=link_to "Sign Up", new_user_registration_path%></div>
+        <%end%>
+      </div>
+    </nav>
+    
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <div class="body-container">
+      <div class="body-constraints">
+        <%= yield %>
+      </div>
+    <div>
+
   </body>
 </html>

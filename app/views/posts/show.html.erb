@@ -1,12 +1,22 @@
-<h1><%= @post.user.username%></h1>
-<h2><%= @post.title %></h1>
-<p>
-<%= @post.body %>
-</p>
+<div class="post-index-container">
+    
+    
+    <div class="post-container">
+        <div class="post-item post-username-text">Posted by: <%= link_to @post.user.username, @post.user%></div>
+        <div class="post-item post-title"><%= @post.title %></div>
+        <div class="post-item post-body"><%= @post.body %></div>
+    </div>
 
+    <div class="comment-section">
+        <%if current_user%>
+                <%= render 'comments/form'%>
+        <%else%>
+                <div>Create an account to post comments!<div>
+        <%end%>
+        <%if @post.comments.length > 1%>
+            <%= render @post.comments%>
+        <%end%>
+    </div>
+    
 
-<%= render 'comments/form'%>
-
-
-
-<%= render @post.comments%>
+</div>

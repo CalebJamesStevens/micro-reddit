@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :posts
   end
   root 'posts#index'
-  
+  resources :users, only: [:show]
   resources :posts do
     resources :comments
   end 

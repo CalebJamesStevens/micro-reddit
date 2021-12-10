@@ -1,18 +1,18 @@
-<%= form_with model: [@user, @user.posts.build] do |form| %>
+<%= form_with model: [@user, current_user.posts.build] do |form| %>
 
     <div>
-        <%= form.label :title %><br>
-        <%= form.text_field :title %>
+        <%= form.label :title, style: "color: black;" %><br>
+        <%= form.text_field :title, class: "post-form-title" %>
 
 
     </div>
     <div>
-        <%= form.label :body %><br>
-        <%= form.text_field :body %>
+        <%= form.label :body, style: "color: black;" %><br>
+        <%= form.text_area :body, class: "post-form-body unsizable-text-area", wrap: "hard", rows:"20"%>
     </div>
 
     <div>
         <%= form.submit %>
     </div>
 
-<%end%>
+<%end%> 

@@ -1,0 +1,13 @@
+
+
+<div class="post-index-container">
+    <div class="userpage-username"><%= @user.username %></div>
+    
+    <%@user.posts.each do |p|%>
+            <%= link_to p,  class:"post-container" do%>
+                <div class="post-item post-username-text">Posted by: <%= p.user.username %></div>
+                <div class="post-item post-title"><%= p.title %></div>
+                <div class="post-item post-body"><%= p.body %></div>
+            <%end%>
+    <%end%>
+</div>

@@ -13,3 +13,139 @@
  *= require_tree .
  *= require_self
  */
+
+
+ a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ body {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    background-color: #333333;
+}
+
+
+
+.unsizable-text-area{
+    resize: none;
+}
+
+.comment-text-area {
+    width: min(95%, 25rem);
+}
+
+.nav-bar {
+    display:flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333333;
+    padding-inline: 2rem;
+    border-bottom: .25rem solid #CCCCCC;
+    color: white;
+
+}
+
+.nav-item-container {
+    display: flex;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    margin-inline: .5ch;
+}
+
+.nav-item a{
+    text-align: center;
+    font-size: 80%;
+    text-decoration: none;
+
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-constraints {
+   width: min(100%, 900px);
+}
+
+.post-index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.post-container {
+    width: min(95%, 700px);
+    background-color: lightgray;
+    border: rgb(153, 153, 153) 2px solid;
+    margin-bottom: 2rem;
+}
+
+.post-item {
+    color: black;
+    margin: 1rem;
+}
+
+.post-username-text {
+    font-size: .5rem;
+    margin-block: .5rem;
+
+}
+
+.post-title {
+    margin-top: .5rem;
+    font-weight: bolder;
+}
+
+.post-body {
+    font-size: .75rem;
+}
+
+.comment-section {
+    width: min(95%, 20rem);
+}
+
+.userpage-username {
+    color: white;
+    text-align: center;
+    background-color: black;
+    width: min(95%, 700px);
+    border: rgb(153, 153, 153) 2px solid;
+    margin-bottom: 2rem;
+}
+
+/*      New Post         */
+
+.new-post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.post-form-container {
+    background-color: lightgray;
+    width: min(90%, 700px);
+    border: rgb(153, 153, 153) 2px solid;
+    padding: .5rem;
+}
+
+.post-form-title {
+    width: 95%;
+}
+
+.post-form-body {
+    width: 95%;
+    margin-bottom: 1rem;
+}

@@ -1,17 +1,13 @@
-<h1>Hey</h1>
 
-<%= link_to "New User", new_user_path%>
-<ul>
-    <%User.all.each do |u|%>
-        <li>
-            <%= link_to u.username, u %>
-        </li>
-    <%end%>
-</ul>
-<ul>
+
+<div class="post-index-container">
+    
     <%@posts.each do |p|%>
-        <li>
-            <%= link_to p.title, "users/#{p.user.id}/posts/#{p.id}"%>
-        </li>
+        <%= link_to p, class:"post-container" do%>
+            <div class="post-item post-username-text">Posted by: <%= p.user.username %></div>
+            <div class="post-item post-title"><%= p.title %></div>
+            <div class="post-item post-body"><%= p.body %></div>
+        <%end%>
     <%end%>
-</ul>
+
+</div>
