@@ -1,21 +1,4 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-
- a {
+a {
     color: inherit;
     text-decoration: none;
 }
@@ -34,7 +17,7 @@
 }
 
 .comment-text-area {
-    width: min(95%, 25rem);
+    width: calc(min(95%, 25rem));
 }
 
 .nav-bar {
@@ -77,7 +60,7 @@
 }
 
 .body-constraints {
-   width: min(100%, 900px);
+   width: calc(min(100%, 900px));
 }
 
 .post-index-container {
@@ -86,7 +69,7 @@
     align-items: center;
 }
 .post-container {
-    width: min(95%, 700px);
+    width: calc(min(95%, 700px));
     background-color: lightgray;
     border: rgb(153, 153, 153) 2px solid;
     margin-bottom: 2rem;
@@ -113,14 +96,14 @@
 }
 
 .comment-section {
-    width: min(95%, 20rem);
+    width: calc(min(95%, 20rem));
 }
 
 .userpage-username {
     color: white;
     text-align: center;
     background-color: black;
-    width: min(95%, 700px);
+    width: calc(min(95%, 700px));
     border: rgb(153, 153, 153) 2px solid;
     margin-bottom: 2rem;
 }
@@ -136,7 +119,7 @@
 
 .post-form-container {
     background-color: lightgray;
-    width: min(90%, 700px);
+    width: calc(min(90%, 700px));
     border: rgb(153, 153, 153) 2px solid;
     padding: .5rem;
 }
