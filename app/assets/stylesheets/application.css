@@ -42,9 +42,9 @@
     padding: 1rem;
     align-items: center;
     justify-content: space-between;
-    background-color: #333333;
+    background-color: #666666;
     padding-inline: 2rem;
-    border-bottom: .25rem solid #CCCCCC;
+    border-bottom: .15rem solid #999999;
     color: white;
 
 }
@@ -98,7 +98,7 @@
 }
 
 .post-username-text {
-    font-size: .5rem;
+    font-size: .6rem;
     margin-block: .5rem;
 
 }
